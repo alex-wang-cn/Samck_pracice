@@ -4,6 +4,7 @@ import com.example.service.IResult;
 import com.example.service.XmppManager;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.view.View;
@@ -15,6 +16,7 @@ public class LoginActivity extends Activity {
 	private EditText etName;
 	private EditText etPass;
 	private Button btLogin;
+	private Button btConfig;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,14 @@ public class LoginActivity extends Activity {
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				}
+			}
+		});
+		btConfig = (Button) findViewById(R.id.btConfig);
+		btConfig.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(LoginActivity.this,
+						ConfigActivity.class));
 			}
 		});
 	}

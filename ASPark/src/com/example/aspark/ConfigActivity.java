@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class ConifgActivity extends Activity {
+public class ConfigActivity extends Activity {
 	private EditText editText;
 	private Button button;
 
